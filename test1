@@ -1,4 +1,21 @@
-# i love jonnywalker
-# Test job
-# new job
-% hjhsj
+pipeline {
+    agent any
+  
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building Code..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing The App..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the App....'
+            }
+        }
+    }
+}
